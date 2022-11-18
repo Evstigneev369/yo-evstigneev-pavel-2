@@ -10,7 +10,7 @@ $font-mono-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "
 /*
   Themes fonts
 */
-$font-base-family: $font-serif-family;
+
 
 /*
 * Breakpoints
@@ -23,6 +23,11 @@ $media-desktop: 1200px;
 /*
 * Colors
 */
+$color-text: #1E0606;
+$primary-color: #C29974;
 
-$color-bg: #fff;
-$color-text: #151515;
+
+/*
+* effect
+*/
+$primary-transition: 0.4s ;

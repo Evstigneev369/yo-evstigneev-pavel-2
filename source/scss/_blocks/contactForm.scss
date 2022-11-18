@@ -1,0 +1,57 @@
+// styles for "form" contact us and pop-up
+.contact-form{
+  background: #E5EAF8;
+  padding: 40px 42px;
+  width: 680px;
+  &__label {
+    @include roboto;
+  }
+  &__input-name {
+    display: block;
+    padding-left: 20px;
+    width: 598px;
+    height: 50px;
+    margin-top: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    &::-webkit-input-placeholder{ 
+      color: $color-text;
+    }
+  }
+  &__wrapped-fields {
+    display: flex;
+    margin-top: 18px;
+  }
+  &__input-phone, &__input-email {
+    display: block;
+    width: 289px;
+    height: 50px;
+    margin-right: 20px;
+    margin-top: 3px;
+    margin-bottom: 19px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  &__input-message {
+    display: block;
+    margin-bottom: 20px;
+    resize: none;
+    width: 598px;
+    height: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    &:hover {
+      outline: none;
+      border: 1px solid $primary-color;
+      transition: $primary-transition;
+    }
+    &:focus {
+      outline: none;
+      border: 1px solid $primary-color;
+    }
+    &:disabled {
+      outline: none;
+      border: 1px solid #f5f5f5;
+    }
+  }
+  &__wrap-processing {
+    margin-bottom: 15px;
+  }
+}

@@ -4,17 +4,15 @@
   align-items: center;
   margin-top: 50px;
   &__logo {
+    @include image-property (100px, 52px);
     background-image: url(../../img/icons/logo.svg);
-    background-repeat: no-repeat;
-    width: 100px;
-    height: 52px;
-  }
-  &__logo:hover {
-    opacity: 0.5;
-    transition: 0.2s;
-  }
-  &__logo:active {
-    opacity: 0.1;
+    &:hover {
+      opacity: 0.5;
+       transition: $primary-transition;
+    }
+    &:active {
+      opacity: 0.1;
+    }
   }
   &__nav-list {
     display: flex;
@@ -24,41 +22,38 @@
     margin-right: 18px;
   }
   &__nav-link {
-    font-size: 14px;
-    line-height: 19px;
-    color: #1E0606;
+    @include open-sans ($line-height: 19px, $font-size: 14px);
+    color: $color-text;
     text-transform: uppercase;
-  } 
-  &__nav-link:hover {
-    opacity: 0.5;
-    transition: 0.2s;
-  }
-  &__nav-link:active {
-    opacity: 0.1;
+    &:hover {
+      opacity: 0.5;
+      transition: $primary-transition;
+    }
+    &:active {
+      opacity: 0.1;
+    }
   }
   &__contact-wrapper {
     margin-left: auto;
   }
   &__search-btn:hover {
     opacity: 0.5;
-    transition: 0.2s;
-  }
-  &__search-btn:active {
-    opacity: 0.1;
+     transition: $primary-transition;
+    &:active {
+      opacity: 0.1;
+    }
   }
   &__nav-contact {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 19px;
-    color: #1E0606;
+    @include open-sans ($line-height: 19px, $font-size: 14px, $font-weight: 700);
+    color: $color-text;
     text-transform: uppercase;
     margin-left: 19px;
-  }
-  &__nav-contact:hover {
-    opacity: 0.5;
-    transition: 0.2s;
-  }
-  &__nav-contact:active {
-    opacity: 0.1;
+    &:hover {
+      opacity: 0.5;
+      transition: $primary-transition;
+    }
+    &:active {
+      opacity: 0.1;
+    }
   }
 }
