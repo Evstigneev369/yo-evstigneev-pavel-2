@@ -562,9 +562,111 @@
     text-transform: uppercase;
   }
   &__price {
-    @include open-sans ( $font-weight: 700);
+    @include open-sans ($font-weight: 700);
     margin-top: 15px;
     text-align: center;
     text-transform: uppercase;
   }
+}
+
+
+
+// stylization of the grid page 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(6, 215px);
+}
+.grid__first-cell {
+  grid-column: 1 / 6;
+  grid-row: span 2;
+  display: flex;
+  justify-content: center; 
+  margin-top: 85px;
+}
+.grid__second-cell {
+  grid-column: 6 / 14;
+  grid-row: span 2;
+  background: #F7F8FA;
+}
+.grid__cell_3 {
+  grid-column: 1 / 3;
+  grid-row: span 2;
+  text-align: center;
+  background: #EF5539;
+}
+.grid__cell_4 {
+  grid-column: 3 / 9;
+  grid-row: span 2;
+  
+  text-align: center;
+}
+.grid__cell_5 {
+  grid-column: 9 / 14;
+  grid-row: span 4;
+  text-align: center;
+  background: #8F75BC;
+}
+.grid__cell_6 {
+  grid-column: 1 / 6;
+  grid-row: span 2;
+  text-align: center;
+  background: #93B7B7;
+}
+.grid__cell_7 {
+  grid-column: 6 / 9;
+  grid-row: span 2;
+  text-align: center;
+  background: #F7F8FA;
+}
+.grid__cell_8 {
+  grid-column: 1 / 3;
+  text-align: center;
+  background: #F7F8FA;
+}
+.grid__cell_9 {
+  grid-column: 3 / 14;
+  text-align: center;
+  background: #2C2C2C;
+}
+
+.grid__phone-wrap {
+  margin-right: 71px;
+  max-width: 540px;
+}
+.grid__narrative-wraper {
+  text-align: center;
+  margin-top: 97px;  
+}
+.grid__chapter{
+  @include lato ($line-height: 14px, $font-size: 12px);
+  color: #BCBCBE;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.grid__heading {
+  @include lato ($line-height: 26px, $font-size: 22px, $font-weight: 500);
+}
+.grid__heading--font {
+  @include lato ($line-height: 58px, $font-size: 48px);
+}
+.grid__text {
+  @include lato ($line-height: 17px, $font-size: 14px, $font-weight: 500);
+  color: #BCBCBE;
+  margin-top: 20px;
+}
+.grid__link {
+  @include lato ($line-height: 14px, $font-size: 12px);
+  color: #2198F4;
+}
+.grid__link--colour {
+  color: #FFC80A;
+}
+.grid__link--font {
+  @include lato ($line-height: 17px, $font-size: 14px, $font-weight: 500);
+  text-decoration: underline;
+}
+.grid__link-text {
+ 
+  margin-top: 20px;
 }

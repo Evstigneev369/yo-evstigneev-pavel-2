@@ -59,5 +59,16 @@
   &__audio {
     height: 19px;
     margin-left: 55px;
+    transform: translateY(-500%);
+    animation: ani 1.5s ease-in-out forwards 0.5s;
+    @keyframes ani {
+      0% {transform: translateY(-500%);}
+      15% {transform: translateY(65%);}
+      30% {transform: translateY(-5%);}
+      45% {transform: translateY(1%);}
+      60% {transform: translateY(-1%);}
+      100% {transform: translateY(0);}
+    }
   }
+  
 }

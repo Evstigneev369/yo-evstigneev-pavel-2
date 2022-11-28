@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,600;0,700;1,200;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,700&family=Montserrat:ital,wght@0,200;0,600;0,700;1,200;1,600;1,700&display=swap" rel="stylesheet">
 
     <title>Main page</title>
     <meta name="description" content="">
@@ -29,20 +32,90 @@
 <body>
 
     
-    <div class="container">
-        @@include('blocks/header.html')
-    </div>
+  <div class="container">
+    @@include('blocks/header.html')
+  </div>
 
 
-    <div class="container">
-        @@include('blocks/breadcrumbs.html', {
-            "title": "grid",
-            "href": "grid.html",
-            "text": "Grid"
-        })
-    </div>
+  <div class="container">
+    @@include('blocks/breadcrumbs.html', {
+      "title": "grid",
+      "href": "grid.html",
+      "text": "Grid"
+    })
+  </div>
 
 
-    @@include('blocks/footer.html')
+  <main>
+
+    <section>
+      <h1 class="hidden-title">grid</h1>
+
+      <ul class="grid">
+
+        <li class="grid__first-cell">
+          
+          <div class="grid__phone-wrap">
+            <p class="grid__chapter">iphone 6s</p>
+            <p class="grid__heading">3D Touch. 12MP photos. 4K video. One powerful phone</p>
+            <p class="grid__text">Learn more or visit an Apple Store today</p>
+          </div>
+
+          <img src="./img/phone.png" alt="iphone_6s" width="249" height="345">
+        </li>
+
+        <li class="grid__second-cell">
+
+          <div class="grid__narrative-wraper">
+            <p class="grid__chapter">learn more</p>
+            <p class="grid__heading grid__heading--font">How to Use Rotary Evaporator in Chemical Labs</p>
+            <a href="#" class="grid__link grid__link--font"><p class="grid__link-text">Download now</p></a>
+          </div>
+          
+        </li>
+
+        <li class="grid__cell_3">
+          <img src="./img/keyboard.png" alt="keyboard" width="314" height="164">
+          <p>Our Brand New Keyboard</p>
+          <a href="#" class="grid__link grid__link--colour"><p class="grid__link-text">learn ›</p></a>
+        </li>
+
+        <li class="grid__cell_4">
+          <p class="grid__chapter">imac.retina</p>
+          <p>Hardly a month passes these days where</p>
+          <p class="grid__text-descriptive">Apple may be experimenting in the virtual reality space. The company has been granted a patent for a head-mounted virtual reality device that would use the iPhone screen as the display.</p>
+          <a href="#" class="grid__link"><p class="grid__link-text">download now ›</p></a>
+          <img src="" alt="">
+        </li>
+
+        <li class="grid__cell_5">
+          <div>
+            <p>popular</p>
+            <img src="" alt="">
+            <p>meet</p>
+          </div>
+          
+          <p>iCloud</p>
+          <p class="grid__text-descriptive">With iCloud, you always have the latest versions of your most important things — like documents, apps, notes, and contacts — on whatever device you’re using.</p>
+          <a href="">learn more</a>
+        </li>
+
+        <li class="grid__cell_6">
+          <p>best choice</p>
+          <p>Much MuchBetter Experience</p>
+          <img src="" alt="">
+        </li>
+
+        <li class="grid__cell_7">7</li>
+        <li class="grid__cell_8">8</li>
+        <li class="grid__cell_9">9</li>
+
+      </ul>
+    </section>
+    
+  </main>
+
+
+  @@include('blocks/footer.html')
 </body>
 </html>
