@@ -50,3 +50,8 @@
   z-index: -1;
   opacity: 0;
 }
+
+@mixin transformation {
+  opacity: 0.5;
+  transition: $primary-transition;
+}

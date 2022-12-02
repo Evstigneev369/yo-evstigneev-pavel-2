@@ -27,8 +27,7 @@
     @include open-sans;
     color: #FFFFFF;
     &:hover {
-      opacity: 0.5;
-      transition: $primary-transition;
+      @include transformation;
     }
     &:active {
       opacity: 0.2;
@@ -91,8 +90,7 @@
     border-radius: 15px;
   }
   &__img:hover {
-    opacity: 0.5;
-    transition: $primary-transition;
+    @include transformation;
     &:active {
       opacity: 0.2;
     }
