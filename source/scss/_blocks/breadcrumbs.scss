@@ -25,3 +25,10 @@
     margin-left: 10px;
   }
 }
+
+
+@media (max-width: 768px) {
+  .breadcrumbs__title {
+    @include montserrat ($line-height: 44px, $font-size: 36px);
+  }
+}

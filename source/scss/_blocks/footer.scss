@@ -8,6 +8,7 @@
     column-gap: 20px;
   }
   &__section {
+    width: 100%;
     margin-top: 101px;
    }
   &__title {
@@ -18,7 +19,7 @@
     padding-bottom: 23px;
   }
   &__list {
-    width: 380px;
+    max-width: 380px;
   }
   &__item {
     margin-top: 15px;
@@ -107,6 +108,7 @@
 .star-rating {
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
   &__company {
     color: #FFFFFF;
     &:hover {
@@ -195,3 +197,27 @@
   }
 }
 
+@media (max-width: 1148px) {
+  .footer__bottom-wrap {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1180px) {
+  .footer__input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    height: 100%;
+  }
+  .footer__wrap {
+    flex-wrap: wrap;
+  }
+ 
+  .footer__list {
+    column-count: 2;
+  }
+}
