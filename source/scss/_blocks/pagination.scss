@@ -53,3 +53,17 @@
     }
   }
 }
+
+@media (max-width: 1179px) {
+  .pagination {
+    margin-bottom: 50px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .pagination__digit {
+    @include montserrat ($line-height: 17px, $font-size: 14px);
+    padding: 25px;
+  }
+}

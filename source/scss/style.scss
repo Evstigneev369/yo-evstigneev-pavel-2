@@ -330,6 +330,41 @@
   }
 }
 
+@media (max-width: 1180px) {
+  .blog__list {
+    justify-content: space-around;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1179px) {
+  .blog__dating-text {
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  .blog__description {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog__list {
+    justify-content: center;
+    row-gap: 25px;
+  }
+  .blog__dating-text {
+    @include open-sans ($line-height: 16px, $font-size: 14px,);
+    margin-top: 10px;
+  }
+  .blog__subtitle {
+    @include montserrat ($line-height: 22px, $font-size: 18px, $text-transform: none);
+  }
+  .blog__description {
+    @include open-sans ($line-height: 22px, $font-size: 16px,);
+    margin-top: 7px;
+  }
+}
+
 
 
 // catalog page styling
@@ -365,6 +400,48 @@
   }
 }
 
+@media (max-width: 1179px) {
+  .catalog-list {
+    justify-content: center;
+    margin: 0;
+    gap: 20px;
+    &__item {
+      position: relative;
+      margin: 0;
+      width: 280px;
+      &:nth-child(3) {
+        margin-right: 0px;
+      }
+      &:nth-child(4) {
+        margin-left: 0px;
+      }
+    }
+  }
+  .Description {
+    margin: 40px 0 50px;
+    width: 86%;
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .Description {
+    margin: 30px 0 50px;
+    width: 90%;
+  }
+  .Description__title {
+    @include montserrat ($line-height: 29px, $font-size: 24px);
+    margin-bottom: 15px;
+  }
+  .Description__text {
+    @include open-sans ($line-height: 19px, $font-size: 14px);
+  }
+}
+
+
+
 
 
 // contact page styling
@@ -398,6 +475,15 @@
   }
 }
 
+@media (max-width: 767px) {
+  .contacts__text {
+    @include open-sans ($line-height: 19px, $font-size: 14px);
+  }
+  .contacts__title {
+    @include montserrat ($line-height: 34px, $font-size: 24px, $font-weight: 600);
+  }
+}
+
 
 
 // stylization of the catalog page with toys
@@ -407,6 +493,7 @@
   height: 100%;
   background: rgba(125, 151, 218, 0.2);
   margin-bottom: 60px;
+  padding-bottom: 25px;
   &__wrap {
     display: flex;
     justify-content: space-between;
@@ -415,6 +502,9 @@
   &__fieldset {
     border: none;
     margin-top: 42px;
+  }
+  &__slider-grouping {
+    margin-right: 11px;
   }
   &__label {
     @include open-sans ($font-weight: 700);
@@ -580,15 +670,60 @@
   }
 }
 
+@media (max-width: 1180px) {
+  .toy-category {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .preferences {
+    margin-bottom: 40px;
+    &__fieldset {
+      margin-top: 25px;
+    }
+    &__btn-wrap {
+      margin-top: 46px;
+    }
+    &__appellation, &__label {
+      @include open-sans ($line-height: 19px, $font-size: 14px, $font-weight: 700);
+    }
+    &__digits, &__amount-label, .radio-label {
+      @include open-sans ($line-height: 19px, $font-size: 14px);
+    }
+  }
+  .toy-category__link:before {
+    display: none;
+  }
+  .toy-category__description {
+    @include open-sans ($line-height: 16px, $font-size: 12px);
+    margin-top: 10px;
+  }
+  .toy-category__price {
+    @include open-sans ($line-height: 16px, $font-size: 12px, $font-weight: 700);
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 393px) {
+  .preferences {
+    padding-bottom: 0;
+    &__btn-wrap {
+      margin: 20px auto;
+    }
+  }
+}
+
+
 
 
 // stylization of the grid page 
 .grid {
   display: grid;
-  grid-template-columns: repeat(11, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(7, 215px);
   &__first-cell {
-    grid-column: 1 / 6;
+    grid-column: 1 / 5;
     grid-row: span 2;
     display: flex; 
     justify-content: center;
@@ -615,7 +750,7 @@
 
 
   &__second-cell {
-    grid-column: 6 / 14;
+    grid-column: 5 / 9;
     grid-row: span 2;
     background: #F7F8FA;
   }
@@ -671,7 +806,7 @@
 
 
   &__fourth-cell {
-    grid-column: 3 / 9;
+    grid-column: 3 / 7;
     grid-row: span 2;
   }
   &__computer-wrap {
@@ -697,7 +832,7 @@
 
 
   &__fifth-cell {
-    grid-column: 9 / 14;
+    grid-column: 7 / 9;
     grid-row: span 4;
     text-align: center;
     background: #8F75BC;
@@ -758,7 +893,7 @@
 
 
   &__sixth-cell {
-    grid-column: 1 / 6;
+    grid-column: 1 / 5;
     grid-row: span 2;
     background: #93B7B7;
   }
@@ -784,7 +919,7 @@
 
 
   &__seventh-cell {
-    grid-column: 6 / 9;
+    grid-column: 5 / 7;
     grid-row: span 2;
     background: #F7F8FA;
     text-align: center;
@@ -817,7 +952,7 @@
 
 
   &__ninth-cell {
-    grid-column: 3 / 14;
+    grid-column: 3 / 9;
     background: #2C2C2C;
   }
   &__TV-wrap {
@@ -831,4 +966,8 @@
     margin: 81px 80px;
   
   }
+}
+
+@media (max-width: 767px) {
+
 }

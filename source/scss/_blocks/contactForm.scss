@@ -1,11 +1,8 @@
 // styles for "form" contact us and pop-up
-.contact-form{
+.contact-form {
   background: #E5EAF8;
   padding: 40px 42px;
   width: 680px;
-  &__label {
-    @include roboto;
-  }
   &__input-name {
     display: block;
     padding-left: 20px;
@@ -29,14 +26,17 @@
     margin-top: 3px;
     margin-bottom: 19px;
     border: 1px solid rgba(0, 0, 0, 0.2);
+    padding-left: 20px;
   }
   &__input-message {
     display: block;
     margin-bottom: 20px;
+    padding-left: 20px;
     resize: none;
     width: 100%;
     height: 150px;
     border: 1px solid rgba(0, 0, 0, 0.2);
+    
     &:hover {
       outline: none;
       border: 1px solid $primary-color;
@@ -54,16 +54,32 @@
   &__wrap-processing {
     margin-bottom: 15px;
   }
+  &__label, &__input-name,
+  &__input-phone, &__input-email, 
+  &__input-message {
+    @include roboto;
+  }
 }
 
 @media (max-width: 767px) {
   .contact-form {
     width: 96%;
+    &__wrapped-fields {
+      display: block;
+    }
+    &__input-phone, &__input-email {
+      width: 100%;
+    }
+    &__label, &__input-name,
+    &__input-phone, &__input-email, 
+    &__input-message {
+      @include roboto ($font-size: 12px);
+    }
   }
-  .contact-form__wrapped-fields {
-    display: block;
-  }
-  .contact-form__input-email, .contact-form__input-phone {
-    width: 100%;
+}
+
+@media (max-width: 375px) {
+  .contact-form__wrap-processing {
+   text-align: center;
   }
 }

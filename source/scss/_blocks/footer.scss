@@ -18,11 +18,8 @@
     border-bottom: 1px solid #666666;
     padding-bottom: 23px;
   }
-  &__list {
-    max-width: 380px;
-  }
   &__item {
-    margin-top: 15px;
+    margin-bottom: 15px
   }
   &__link {
     @include open-sans;
@@ -35,16 +32,17 @@
     }
   }
   &__form-wrap {
-    display: flex;
+    position: relative;
   }
   &__input {
     border: 0;
-    width: 303px;
+    width: 100%;
     height: 40px;
     padding-left: 15px;
     background-color: #666666;
     color: #666666;;
     &::-webkit-input-placeholder {
+      @include open-sans($line-height: 19px, $font-size: 14px);
       color: #EBEBEB;
     }
     &:hover {
@@ -62,6 +60,7 @@
     display: flex;
     border-top: 1px solid #666666;
     padding-top: 23px;
+    flex-wrap: wrap;
   }
   &__bottom-text {
     @include open-sans;
@@ -98,17 +97,23 @@
   }
 }
 
+.location {
+  position: absolute;
+  right: 0;
+}
+
 .footer__bottom-text, .star-rating {
   max-width: 400px;
   width: 100%;
+  margin-bottom: 15px;
 }
 
 
 // style for a star rating
 .star-rating {
+  @include open-sans; 
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
   &__company {
     color: #FFFFFF;
     &:hover {
@@ -197,27 +202,24 @@
   }
 }
 
-@media (max-width: 1148px) {
-  .footer__bottom-wrap {
-    flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 1180px) {
-  .footer__input {
-    width: 100%;
-  }
-}
 
 @media (max-width: 767px) {
   .footer {
     height: 100%;
+    &__wrap {
+      flex-wrap: wrap;
+    }
+    &__section {
+      margin-top: 70px;
+    }
+    &__list {
+      column-count: 2;
+    }
+    &__link, &__bottom-link, &__bottom-text, .star-rating {
+      @include open-sans ($line-height: 19px, $font-size: 14px);
+    }
   }
-  .footer__wrap {
-    flex-wrap: wrap;
-  }
- 
-  .footer__list {
-    column-count: 2;
+  .social-networks__item {
+    margin-right: 20px;
   }
 }

@@ -27,8 +27,32 @@
 }
 
 
-@media (max-width: 768px) {
-  .breadcrumbs__title {
-    @include montserrat ($line-height: 44px, $font-size: 36px);
+@media (max-width: 1179px) {
+  .breadcrumbs {
+    margin-bottom: 30px;
+    &__title {
+      @include montserrat ($line-height: 44px, $font-size: 36px);
+    }
+    &__list {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .breadcrumbs {
+    margin-bottom: 20px;
+    &__title {
+      @include montserrat ($line-height: 29px, $font-size: 24px);
+    }
+    &__item:not(:last-child)::after {
+      margin: 6px;
+    }
+    &__link {
+      @include crimson-text ($line-height: 21px, $font-size: 16px);
+    }
+    &__link--translucent {
+      margin-left: 6px;
+    }
   }
 }

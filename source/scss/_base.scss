@@ -74,7 +74,7 @@ input:disabled {
 .custom-checkbox {
   @include reset-standard;
 }
-.checkbox-label{
+.checkbox-label {
   @include open-sans;
 }
 .custom-checkbox+.checkbox-label::before {
@@ -93,6 +93,12 @@ input:disabled {
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 95%;
+}
+
+@media (max-width: 767px) {
+  .checkbox-label {
+    @include open-sans ($line-height: 19px, $font-size: 14px);
+  }
 }
 
 
@@ -116,15 +122,20 @@ input:disabled {
   border: none;
   cursor: pointer;
   transition: $primary-transition;
+  &:hover {
+    background: $primary-color;
+  }
+  &:active {
+    background-color: #cfaf91;
+  }
+  &:disabled {
+    background: #c7c1c1;
+  }
 }
-.button-link:hover {
-  background: $primary-color;
-}
-.button-link:active {
-  background-color: #cfaf91;
-}
-.button-link:disabled {
-  background: #c7c1c1;
+@media (max-width: 767px) {
+  .button-link {
+    @include open-sans($line-height: 20px, $font-size: 14px, $font-weight: 700);
+  }
 }
 
 
@@ -141,7 +152,7 @@ input:disabled {
   background-color: #EEE4DB;;
 }
 .catalog-link {
-  @include montserrat ($font-size: 38px);
+  @include montserrat ($line-height: 32px, $font-size: 38px);
   position: absolute;
   font-size: 26px;
   line-height: 32px;
@@ -157,6 +168,18 @@ input:disabled {
   }
   &:active {
     text-decoration: underline;
+  }
+}
+
+@media (max-width: 1179px) {
+  .catalog-link {
+    @include montserrat ($line-height: 29px, $font-size: 24px);
+  }
+}
+
+@media (max-width: 767px) {
+  .catalog-link {
+    @include montserrat ($line-height: 22px, $font-size: 20px);
   }
 }
 
