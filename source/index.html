@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,600;0,700;1,200;1,600;1,700&display=swap" rel="stylesheet">
 
-    <title>Main page</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <title>Layout of the main page of the educational project DL Academy Togliatti</title>
+    <meta name="description" content="The main page of the educational project DL Academy Togliatti presents basic information about the services of the store, the address of the location and impressions of employees">
+    <meta name="keywords" content="Basic information about the store's services and the address of its location DL Academy Togliatti">
 
     <script>
       var docElement = document.documentElement;
@@ -32,10 +32,17 @@
     <div class="container">
         @@include('blocks/header.html')
     </div>
+
+    <audio autoplay>
+        <source 
+            src="../../audio/music.mp3"
+            type="audio/mpeg"
+        >
+    </audio>
   
 
   <main>
-    <div class="container">
+    <div class="container container-reset">
         <section class="banner">
 
             <div class="banner__slider-menu">
@@ -76,33 +83,33 @@
         <section class="category-products">
             <h2 class="category-products__title">Category Products</h2>
 
-            <div>
                 <ul class="category-products__list">
                     <li class="category-products__item">
-                        <img src="./img/apparel_kids.jpg" class="catalog-images" width="280" height="270" alt="apparel_kids">
+                        <img src="./img/apparel_kids.jpg" class="catalog-images catalog-images__width" width="280" height="270" alt="apparel_kids">
                         <a href="#"> <p class="catalog-link">apparel kids</p></a>
                     </li>
     
                     <li class="category-products__item">
-                        <img src="./img/holiday_shop.jpg" class="catalog-images" width="280" height="270" alt="holiday_shop">
+                        <img src="./img/holiday_shop.jpg" class="catalog-images catalog-images__width" width="280" height="270" alt="holiday_shop">
                         <a href="#"> <p class="catalog-link">holiday shop</p></a>
                     </li>
     
                     <li class="category-products__item">
-                        <img src="./img/toys.jpg" class="catalog-images" width="280" height="270" alt="toys">
+                        <img src="./img/toys.jpg" class="catalog-images catalog-images__width" width="280" height="270" alt="toys">
                         <a href="./toys.html"> <p class="catalog-link">toys</p></a>
                     </li>
     
                     <li class="category-products__item">
-                        <img src="./img/accessories.jpg" class="catalog-images" width="280" height="270" alt="accessories">
+                        <img src="./img/accessories.jpg" class="catalog-images catalog-images__width" width="280" height="270" alt="accessories">
                         <a href="#"> <p class="catalog-link">accessories</p></a>
                     </li>
                 </ul>
-            </div>
 
             <div class="category-products__wrap">
-                <button class="category-products__btn"></button>
-                <button class="category-products__btn category-products__btn--right"></button>
+                <div class="category-products__btn-wrap">
+                    <button class="category-products__btn"></button>
+                    <button class="category-products__btn category-products__btn--right"></button>
+                </div>
                 <p class="category-products__text">Modern finds for the modern home. Curated goods by unique designers around the world from fashion to furniture for kids and adults.</p>
             </div>
             
@@ -112,7 +119,12 @@
 
     <div class="container">
         <section class="delivery">
-            <img src="./img/delivery.jpg" width="480" height="559" alt="delivery" class="delivery__img">
+
+            <picture>
+                <source srcset="img/mobile_delivery_2x.jpg 2x" type="image/jpeg" media="(max-width:767px)">
+                <source srcset="img/delivery_2x.jpg 2x" type="image/jpeg" media="(max-width:1023px)">
+                <img src="./img/delivery.jpg" width="480" height="559" alt="delivery" class="delivery__img">
+            </picture>
 
                 <div class="delivery__wrapper">
 
@@ -179,7 +191,7 @@
     </div> 
 
 
-    <div class="container">
+    <div class="container container-reset">
         <section class="about-us">
 
             <div class="about-us__wrapper">

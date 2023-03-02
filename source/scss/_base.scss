@@ -8,6 +8,12 @@
     padding: 0 30px;
   }
 }
+@media (max-width: 767px) {
+  .container-reset {
+    padding: 0;
+  }
+}
+
 
 
 // resetting standard browser styles
@@ -28,6 +34,7 @@ a {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 
@@ -147,9 +154,10 @@ input:disabled {
 
 // style for the catalog
 .catalog-images {
-  width: 280px;
-  height: 270px;
-  background-color: #EEE4DB;;
+  background-color: #EEE4DB;
+}
+.catalog-images__width {
+  max-width: none;
 }
 .catalog-link {
   @include montserrat ($line-height: 32px, $font-size: 38px);
@@ -171,15 +179,19 @@ input:disabled {
   }
 }
 
-@media (max-width: 1179px) {
+@media (max-width: 1023px) {
   .catalog-link {
-    @include montserrat ($line-height: 29px, $font-size: 24px);
+    @include montserrat ($line-height: 25px, $font-size: 20px);
   }
 }
 
 @media (max-width: 767px) {
   .catalog-link {
     @include montserrat ($line-height: 22px, $font-size: 20px);
+  }
+  .catalog-images__width {
+    width: 247px;
+    height: 238px;
   }
 }
 
