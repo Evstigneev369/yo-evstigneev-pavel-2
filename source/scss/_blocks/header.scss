@@ -4,8 +4,8 @@
   align-items: center;
   margin-top: 50px;
   &__logo {
+    display: block;
     width: 100px; 
-    height: 52px;
    }
   &__logo:hover {
     @include transformation;
@@ -34,8 +34,14 @@
       opacity: 0.1;
     }
   }
+  &__search-btn {
+    display: block;
+    width: 18px;
+  }
   &__contact-wrapper {
     margin-left: auto;
+    display: flex;
+    align-items: center;
   }
   &__search-btn:hover {
     @include transformation;
@@ -49,80 +55,145 @@
   }
 }
 
-// .mobile-header {
-//   display: none;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   height: 100%;
-//   width: 100%;
-//   background: rgba(125, 151, 218, 0.8);
-//   transform: translateY(-1000px);
-//   transition: .4s;
-// }
-.mobile-header__nav-item {
- text-align: center;
- margin-bottom: 20px;
-}
-.mobile-header__nav-link {
-  @include open-sans ($line-height: 19px, $font-size: 14px);
-    color: $color-text;
-    text-transform: uppercase;
-}
-.mobile-header__nav-link:hover {
-  @include transformation
-}
-.mobile-header__nav-link:active {
-  opacity: 0.1;
-}
-.mobile-header__nav-link--bold-font {
-  @include open-sans ($line-height: 19px, $font-size: 14px, $font-weight: 700);
-}
-.mobile-header__open {
-  display: block;
-}
-
-
-
-
-
-@media (max-width: 1023px) {
-  .header__burger-menu {
-    @include open-sans ($line-height: 19px, $font-size: 14px);
-    text-transform: uppercase;
+.mobile-header {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(125, 151, 218, 0.8);
+  z-index: 1;
+  // transform: translateY(-100%);
+  // transition: .4s;
+  &__content-wrap {
+    background-color: #fff;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 13%);
+    padding: 35px 0 1px;
+  }
+  &__cap-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+  &__logo {
     display: block;
+    width: 52px; 
+  }
+  &__search-btn {
+    display: block;
+    width: 15px;
+  }
+  &__nav-list {
+    position: relative;
+    padding-top: 15px;
+  }
+  &__nav-item {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 30px;  
+  }
+  &__nav-item--indent {
+    margin-top: 35px;
+  }
+  
+  &__burger-menu {
     padding: 0;
     border: none;
     background-color: transparent;
+    position: absolute;
+    top: -9%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      transform: rotate(45deg);
+      height: 100%;
+      width: 1px;
+      background-color: #000;
+      border-radius: 5px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      transform: rotate(-45deg);
+      height: 100%;
+      width: 1px;
+      background-color: #000;
+      border-radius: 5px;
+    }
   }
-  .header__nav-list {
-    margin: auto;
-    display: block;
+  &__nav-link {
+    @include open-sans ($line-height: 19px, $font-size: 14px);
+    color: $color-text;
+    text-transform: uppercase;
   }
-  .header__nav-item {
-    margin-right: 0;
-  }
-  .header__nav-link {
-    display: none;
-  }
-  .header__contact-wrapper {
-    margin-left: 0;
-  }
-  .header__logo {
-   width: 62px; 
-   height: 32px;
+  &__nav-link--bold-font {
+    @include open-sans ($line-height: 19px, $font-size: 14px, $font-weight: 700);
   }
 }
 
-@media (max-width: 767px) {
-  .header__burger-menu {
-    @include open-sans ($font-size: 12px);
+@media (max-width: 1023px) {
+  .header {
+    margin-top: 35px;
+    &__logo {
+      width: 62px; 
+     }
+    &__burger-menu {
+      @include open-sans ($line-height: 19px, $font-size: 14px);
+      text-transform: uppercase;
+      display: block;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+    }
+    &__nav-list {
+      margin: auto;
+      display: block;
+    }
+    &__nav-item {
+      margin-right: 0;
+    }
+    &__nav-link {
+      display: none;
+    }
+    &__contact-wrapper {
+      margin-left: 0;
+    }
   }
+  .mobile-header__nav-link--bold-font {
+    @include open-sans ($line-height: 19px, $font-size: 14px, $font-weight: 700);
+  }
+  .mobile-header__open {
+    display: block;
+  } 
+}
+
+@media (max-width: 767px) {
+  .header {
+    margin-top: 25px;
+  &__logo {
+      width: 52px; 
+     }
+  &__burger-menu {
+      @include open-sans ($font-size: 12px);
+    }
+  &__search-btn {
+      width: 15px;
+    }
+  }
+  
   .mobile-header__nav-link {
     @include open-sans ( $font-size: 12px); 
   }
-  .header__logo {
-    width: 52px; 
-    height: 22px;
-   }
+  .mobile-header__nav-link--bold-font {
+    @include open-sans ($line-height: 19px, $font-size: 14px, $font-weight: 700);
+  }
+  
 }

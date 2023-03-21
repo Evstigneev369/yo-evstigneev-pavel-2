@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,700&family=Montserrat:ital,wght@0,200;0,600;0,700;1,200;1,600;1,700&display=swap" rel="stylesheet">
 
-    <title>Layout of the grid page of the educational project DL Academy Togliatti</title>
+    <title>Grid - Design Life Kids</title>
     <meta name="description" content="The grid page of the educational project DL Academy Togliatti provides information about the achievements of our products and links to them">
     <meta name="keywords" content="Achievements of DL Academy Togliatti products and links to them">
 
@@ -61,22 +61,22 @@
             <p class="grid__text">Learn more or visit an Apple Store today</p>
           </div>
 
-          <img src="./img/phone.png" alt="iphone_6s" width="249" height="345">
+          <img src="./img/phone.png" class="grid__phone-img" alt="iphone_6s" width="249" height="345">
 
         </li>
 
 
         <li class="grid__second-cell">
-          <div class="grid__narrative-wraper">
 
+          <div class="grid__narrative-wraper">
             <p class="grid__chapter">learn more</p>
             <p class="grid__vaporizer-text">How to Use Rotary Evaporator in Chemical Labs</p>
 
             <a href="#" class="grid__link grid__link--font">
               <p class="grid__link-text">Download now</p>
             </a>
-
           </div>
+          
         </li>
 
 
@@ -101,6 +101,7 @@
             <div class="grid__proposal-wrap">
               <p class="grid__chapter">imac.retina</p>
               <p class="grid__computer-proposal">Hardly a month passes these days where</p>
+              <img src="./img/computer.png" class="grid__computer-img" alt="outdated_computer" width="352" height="164">
             </div>
 
             <div class="grid__description-wrap">
@@ -110,9 +111,11 @@
               </a>
             </div>
             
+          
+
           </div>
           
-          <img src="./img/computer.png" alt="outdated_computer" width="352" height="164">
+          
         </li>
 
 
@@ -179,7 +182,7 @@
     
   </main>
 
-
   @@include('blocks/footer.html')
+  
 </body>
 </html>
