@@ -507,7 +507,28 @@
   }
 }
 
+@media (max-width: 1023px) {
+  .popup__cross {
+    top: -5%;
+    left: 666px;
+  }
+}
 
+@media (max-width: 767px) {
+  .popup__wrap {
+    margin: 20px;
+  }
+  .popup__cross {
+    top: -4%;
+    left: 95%;
+  }
+}
+
+@media (max-width: 410px) {
+  .popup__cross {
+    left: 93%;
+  }
+}
 
 
 
@@ -1396,4 +1417,409 @@
       text-align: center;
     }
   } 
+}
+
+
+
+
+// stylization of the SVG animation page
+.svg {
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.2));
+  margin-bottom: 60px;
+  &__cap {
+    animation: cap 9.5s;
+   }
+   @keyframes cap {
+     0% {
+       transform: translateY(-1000px);
+     }
+     100% {
+       transform: translateY(0px);
+     }
+   }
+
+   &__black-pillar {
+    animation: black-pillar 9.5s;
+  }
+  @keyframes black-pillar {
+    0% {
+      transform: translateX(-1000px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  
+  &__rectangular-page {
+    animation: rectangular-page 5.5s linear;
+    stroke: #656D78;
+  }
+  &__rectangular-page--gray-stroke {
+    animation: rectangular-page 2.5s linear;
+    stroke: #E6E9ED;
+  }
+  @keyframes rectangular-page {
+    0% {
+      fill-opacity: 0;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+    }
+    50% {
+      fill-opacity: 0;
+      stroke-dashoffset: 10;
+    }
+    100% {
+      fill-opacity: 1;
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  &__even-lines {
+    animation: even-lines 6.5s;
+    transition: 0.5s;
+  }
+  &__even-lines:hover {
+    transform: translateX(15px);
+  }
+  @keyframes even-lines {
+    0% {
+      stroke-width: 0%;
+      transform: translateY(4800px);
+    }
+    50% {
+      stroke-width: 0%;
+    }
+    90% {
+      stroke-width: 0.5%;
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  &__odd-lines {
+    animation: odd-lines 7s;
+    transition: 0.5s;
+  }
+  &__odd-lines:hover {
+    transform: translateX(-15px);
+  }
+  @keyframes odd-lines {
+    0% {
+      stroke-width: 0%;
+      opacity: 0;
+      transform: translateX(-4800px);
+    }
+    50% {
+      stroke-width: 0%;
+    }
+    85% {
+      stroke-width: 0.5%;
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  } 
+  
+  &__landscape-rectangle {
+    animation: landscape-rectangle 4.5s ease-in-out;
+    stroke: #5D9CEC;
+  }
+  &__landscape-rectangle:hover {
+    fill: #2C2C2C;
+    stroke: #2C2C2C ;
+    transition: 0.5s;
+  }
+  @keyframes landscape-rectangle {
+    0% {
+      fill-opacity: 0;
+      stroke-opacity: 0;
+      stroke-dasharray: 10;
+      stroke-dashoffset: 1000;
+    }
+    80% {
+      fill-opacity: 0;
+      stroke-opacity: 1;
+      stroke-dasharray: 750;
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-opacity: 1;
+      fill-opacity: 1;
+      stroke-dasharray: 1000;
+    }
+  }
+  
+  &__small-triangle {
+    animation: small-triangle 6.5s ease-in-out;
+  }
+  @keyframes small-triangle {
+    0% {
+      opacity: 0;
+      
+    }
+    50% {
+      opacity: 0;
+  
+    }
+    100% {
+      opacity: 1;
+    
+    }
+  }
+  
+  &__big-triangle {
+    animation: big-triangle 5.5s ease-in-out;
+  }
+  @keyframes big-triangle {
+    0% {
+      fill-opacity: 0;
+      stroke-opacity: 0;
+    }
+    30% {
+      stroke-opacity: 0;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+    }
+    80% {
+      stroke-opacity: 1;
+      fill-opacity: 0;
+      stroke-dashoffset: 400;
+    }
+    100% {
+      fill-opacity: 1;
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  &__circle { 
+    animation: circle 7.5s;
+    transition: 0.5s;
+  }
+  &__circle:hover {
+   transform: translateY(-3px);
+    fill: #E6E9ED;
+  }
+  @keyframes circle {
+    0% {
+      fill-opacity: 0;
+      transform: translateX(4000px) rotate(20deg);
+    }
+    50% {
+      fill-opacity: 0;
+    }
+    100% {
+      transform: translateX(0px) rotate(0deg);
+      fill-opacity: 1;
+    }
+  }
+  
+  &__special-lines {
+    animation: special-lines 5s cubic-bezier(1,-0.55,0.265,1.55);
+    transition: 0.5s;
+  }
+  &__special-lines--delay {
+    animation-duration: 5.5s;
+  }
+  &__special-lines:hover {
+    transform: translateX(-15px);
+  }
+  @keyframes special-lines {
+    0% {
+      stroke-width: 0%;
+      transform: translateY(100px) skew(30deg, 10deg);
+    }
+    85% {
+      stroke-width: 0.5%;
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+
+
+
+
+
+// // stylization of the Animation scene page
+
+.sky__wrap {
+  display: flex;
+  position: relative;
+}
+.sky__cloud-first {
+  position: absolute;
+  margin-left: 5.78%;
+  max-width: 5%;
+}
+.sky__cloud-second {
+  position: absolute;
+  margin-left: 25.4%;
+  max-width: 10%;
+}
+.sky__cloud-tri{
+  position: absolute;
+  margin-left: 43.75%;
+  max-width: 9%;
+}
+.sky__cloud-four {
+  position: absolute;
+  margin-left: 51.84%;
+  max-width: 11%;
+}
+.sky__cloud-fifth {
+  position: absolute;
+  margin-left: 72.76%;
+  max-width: 5%;
+}
+.sky__sun {
+  position: absolute;
+  margin-left: 83.48%;
+  max-width: 4%;
+}
+.sky__cloud-sixth {
+  position: absolute;
+  margin-left: 89.85%;
+  max-width: 8%;
+}
+
+.scene {
+  margin-top: 100px;
+  position: relative;
+  overflow: hidden;
+  height: 815px;
+}
+.scene__street {
+  position: absolute;
+  width: 100%;
+}
+
+.scene__car-wrap {
+  position: relative;
+}
+.scene__car-one {
+  margin-left: 80%;
+  margin-top: 21%;
+  max-width: 10.5%;
+  position: absolute;
+}
+.scene__car-two {
+  margin-left: 55%;
+  margin-top: 20.6%;
+  max-width: 9%;
+  position: absolute;
+}
+.scene__car-three {
+  margin-left: 20%;
+  margin-top: 21.7%;
+  max-width: 11%;
+  position: absolute;
+}
+.scene__car-four {
+  margin-left: 5%;
+  margin-top: 20.2%;
+  max-width: 11%;
+  position: absolute;
+}
+
+.scene__Lantern-first {
+  position: absolute;
+  margin-left: 31%;
+  margin-top: 6%;
+  max-width: 8%;
+}
+.scene__Lantern-second {
+  position: absolute;
+  margin-left: 93%;
+  margin-top: 6%;
+  max-width: 8%;
+}
+
+.scene__taxi-wrap {
+  position: relative;
+}
+.scene__taxi {
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 19.5%;
+  max-width: 47%;
+}
+.scene__taxi-message {
+  position: absolute;
+  margin-left: 67%;
+  margin-top: 16%;
+  max-width: 9%;
+}
+.scene__colored-lantern {
+  position: absolute;
+  margin-left: 72%;
+  margin-top: 8%;
+  max-width: 11%;
+}
+
+.scene__passengers-wrap {
+  position: relative;
+}
+.scene__woman-wrap {
+  position: relative;
+}
+.scene__woman-body {
+  position: absolute;
+  margin-left: 19.5%;
+  margin-top: 23.2%;
+  max-width: 5%;
+  z-index: 5;
+}
+.scene__woman-hand {
+  position: absolute;
+  margin-left: 21%;
+  margin-top: 28.7%;
+  max-width: 3%;
+}
+.scene__woman-suitcases {
+  position: absolute;
+  margin-left: 19%;
+  margin-top: 32%;
+  max-width: 10%;
+  z-index: 6;
+}
+.scene__woman-message {
+  position: absolute;
+  margin-left: 15%;
+  margin-top: 17%;
+  max-width: 9%;
+}
+
+.scene__man-wrap {
+  position: relative;
+}
+.scene__man-body {
+  position: absolute;
+  margin-left: 25%;
+  margin-top: 18.5%;
+  max-width: 11%;
+  z-index: 6;
+}
+.scene__man-hand {
+  margin-left: 23%;
+  margin-top: 22.5%;
+  max-width: 5%;
+  transform: rotate(150deg);
+  position: absolute;
+  z-index: 5;
+}
+.scene__man-message {
+  position: absolute;
+  max-width: 9%;
+  margin-top: 14%;
+  margin-left: 24.5%;
+  z-index: 1;
+}
+.scene__man-news {
+  max-width: 9%;
+  margin-top: 14%;
+  margin-left: 24.5%;
+  position: absolute;
 }

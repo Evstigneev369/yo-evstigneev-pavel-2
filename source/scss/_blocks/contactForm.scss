@@ -64,7 +64,9 @@
 
 @media (max-width: 767px) {
   .contact-form {
+    margin: auto;
     width: 96%;
+    padding: 25px;
     &__wrapped-fields {
       display: block;
     }

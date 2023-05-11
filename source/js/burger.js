@@ -1,20 +1,19 @@
-var mobileheader = document.querySelector('.mobile-header')
-var burgerbtn = document.querySelector('.header__burger-menu--js')
-var burgerclose = document.querySelector('.mobile-header__burger-menu')
-var input = mobileheader.querySelector('input')
+const mobileHeader = document.querySelector('.mobile-header')
+const burgerBtn = document.querySelector('.header__burger-menu--js')
+const burgerClose = document.querySelector('.mobile-header__burger-menu')
 
-burgerbtn.addEventListener('click', function() {
-    mobileheader.classList.add('mobile-header__open')
+burgerBtn.addEventListener('click', function() {
+    mobileHeader.classList.add('mobile-header__open')
     input.focus()
 })
 
-burgerclose.addEventListener('click', function() {
-    popup.classList.remove('mobile-header__open')
+burgerClose.addEventListener('click', function() {
+    mobileHeader.classList.remove('mobile-header__open')
 })
 
 window.addEventListener('keydown', function(event) {
-    if (event.key === "Escape" && mobileheader.classList.contains("mobile-header__open")) {
-        mobileheader.classList.remove('mobile-header__open');
+    if (event.key === "Escape" && mobileHeader.classList.contains("mobile-header__open")) {
+        mobileHeader.classList.remove('mobile-header__open');
         console.logo("Закрытие формы")
     }
 })
