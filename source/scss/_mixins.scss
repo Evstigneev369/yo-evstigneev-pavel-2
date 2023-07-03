@@ -56,9 +56,9 @@
   transition: $primary-transition;
 }
 
-@mixin image-location ($max-width: 5%, $margin-top: 10%, $margin-left: 20%) {
+@mixin image-location ($width: 5%, $margin-top: 10%, $margin-left: 20%) {
   position: absolute;
-  max-width: $max-width;
+  width: $width;
   margin-top: $margin-top;
   margin-left: $margin-left;
 }

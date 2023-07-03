@@ -169,6 +169,7 @@
   }
   .mobile-header {
     display: initial;
+    z-index: 7;
   }
   .mobile-header__nav-link--bold-font {
     @include open-sans ($line-height: 19px, $font-size: 14px, $font-weight: 700);

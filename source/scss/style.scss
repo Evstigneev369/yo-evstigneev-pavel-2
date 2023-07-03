@@ -1426,6 +1426,11 @@
 .svg {
   filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.2));
   margin-bottom: 60px;
+  @media (max-width: 447px) {
+    .svg__girth {
+      width: 100%;
+    }
+  }
   &__cap {
     animation: cap 9.5s;
    }
@@ -1645,102 +1650,308 @@
 
 // // stylization of the Animation scene page
 
-.sky__wrap {
-  display: flex;
-  position: relative;
-}
-.sky__cloud-first {
-  @include image-location ($margin-top: 0, $margin-left: 5.78%);
-}
-.sky__cloud-second {
-  @include image-location ($max-width: 10%, $margin-top: 1%, $margin-left: 25.4%);
-}
-.sky__cloud-tri {
-  @include image-location ($max-width: 9%, $margin-top: 0, $margin-left: 43.75%);
-}
-.sky__cloud-four {
-  @include image-location ($max-width: 11%, $margin-top: 4%, $margin-left: 51.84%);
-}
-.sky__cloud-fifth {
-  @include image-location ($max-width: 5%, $margin-top: 1%, $margin-left: 72.76%);
-}
-.sky__sun {
-  @include image-location ($max-width: 4%, $margin-top: -2%, $margin-left: 83.48%);
-}
-.sky__cloud-sixth {
-  @include image-location ($max-width: 8%, $margin-top: 1%, $margin-left: 89.85%);
-}
-
 .scene {
-  margin-top: 100px;
-  position: relative;
   overflow: hidden;
-  height: 815px;
-}
-.scene__street {
-  position: absolute;
-  width: 100%;
-}
+  position: relative;
+  padding-top: 2%;
+  padding-bottom: 44%;
+  &__cloud-wrap {
+    margin-bottom: 8%;
+  }
+  &__cloud-first {
+    @include image-location ($margin-top: 0, $margin-left: 0);
+    animation: cloud-first 80s linear infinite alternate;
+  }
+  @keyframes cloud-first {
+    0% {
+      margin-left: -5.78%;
+    }
+    100% {
+      margin-left: 110%;
+    }
+  }
+  
+  &__cloud-second {
+    @include image-location ($width: 10%, $margin-top: 1%, $margin-left: 0);
+    animation: cloud-second 83s linear infinite alternate;
+  }
+  @keyframes cloud-second {
+    0% {
+      margin-left: -25.4%;
+    }
+  
+    100% {
+      margin-left: 110%;
+    }
+  }
+  
+  &__cloud-tri {
+    @include image-location ($width: 9%, $margin-top: 0, $margin-left: 0);
+    animation: cloud-tri 86s linear infinite alternate;
+  }
+  @keyframes cloud-tri {
+    0% {
+      margin-left: -43.75%;
+    }
+  
+    100% {
+      margin-left: 110%;
+    }
+  }
+  
+  &__cloud-four {
+    @include image-location ($width: 11%, $margin-top: 4%, $margin-left: 0);
+    animation: cloud-four 89s linear infinite alternate;
+  }
+  @keyframes cloud-four {
+    0% {
+      margin-left: -51.84%;
+    }
+  
+    100% {
+      margin-left: 110%;
+    }
+  }
+  
+  &__cloud-fifth {
+    @include image-location ($width: 5%, $margin-top: 1%, $margin-left: 0);
+    animation: cloud-fifth 94s linear infinite alternate;
+  }
+  @keyframes cloud-fifth {
+    0% {
+      margin-left: -72.76%;
+    }
+  
+    100% {
+      margin-left: 110%;
+    }
+  }
+  
+  &__sun {
+    @include image-location ($width: 4%, $margin-top: -2%, $margin-left: 0);
+    animation: sun 97s linear infinite alternate;
+  }
+  @keyframes sun {
+    0% {
+      margin-left: -83.48%;
+    }
+  
+    100% {
+      margin-left: 110%;
+    }
+  }
+  
+  &__cloud-sixth {
+    @include image-location ($width: 8%, $margin-top: 1%, $margin-left: 0);
+    animation: cloud-sixth 103s linear infinite alternate;
+  }
+  @keyframes cloud-sixth {
+    0% {
+      margin-left: -89.85%;
+    }
+  
+    100% {
+      margin-left: 110%;
+    }
+  }
 
-.scene__car-one {
-  @include image-location ($max-width: 10.5%, $margin-top: 21%, $margin-left: 0);
-}
-.scene__car-two {
-  @include image-location ($max-width: 9%, $margin-top: 20.6%, $margin-left: 0);
-}
-.scene__car-three {
-  @include image-location ($max-width: 11%, $margin-top: 21.7%, $margin-left: 0);
-}
-.scene__car-four {
-  @include image-location ($max-width: 11%, $margin-top: 20.2%, $margin-left: 0);
-}
+  &__street {
+    position: absolute;
+    width: 100%;
+  }
+  
+  &__car-one {
+    @include image-location ($width: 10.6%, $margin-top: 21%, $margin-left: 0);
+    animation: car-movement 6s ease-in-out infinite;
+    z-index: 3;
+  }
+  &__car-two {
+    @include image-location ($width: 9.5%, $margin-top: 19.8%, $margin-left: 0);
+    animation: car-movement 7s ease-out infinite;
+    z-index: 2;
+  }
+  &__car-three {
+    @include image-location ($width: 9.3%, $margin-top: 20.9%, $margin-left: 0);
+    animation: car-movement 10s linear infinite;
+    z-index: 1;
+  }
+  &__car-four {
+    @include image-location ($width: 11%, $margin-top: 20.2%, $margin-left: 0);
+    animation: car-movement 5s infinite;
+    z-index: 4;
+  }
+  @keyframes car-movement {
+    0% {
+      margin-left: -50%;
+    }
+  
+    100% {
+      margin-left: 100%;
+    }
+  }
+  
+  &__Lantern-first {
+    @include image-location ($width: 8%, $margin-top: 6%, $margin-left: 31%);
+      z-index: 5;
+  }
+  &__Lantern-second {
+    @include image-location ($width: 8%, $margin-top: 6%, $margin-left: 93%);
+      z-index: 5;
+  }
 
-.scene__Lantern-first {
-  @include image-location ($max-width: 8%, $margin-top: 6%, $margin-left: 31%);
-}
-.scene__Lantern-second {
-  @include image-location ($max-width: 8%, $margin-top: 6%, $margin-left: 93%);
-}
+  &__taxi {
+    @include image-location ($width: 47%, $margin-top: 19.5%, $margin-left: 0);
+    animation: car-taxi 5s ease-in-out 6.2s;
+    z-index: 5;
+    opacity: 0;
+  }
+  @keyframes car-taxi {
+    0% {
+      opacity: 1;
+      margin-left: 100%;
+    }
+  60% {
+    margin-left: 35%;
+  }
+  75% {
+    margin-left: 35%;
+  }
+    100% {
+      opacity: 1;
+    margin-left: -100%;
+    }
+  }
 
-.scene__taxi {
-  @include image-location ($max-width: 47%, $margin-top: 19.5%, $margin-left: 46%);
-}
-.scene__taxi-message {
-  @include image-location ($max-width: 9%, $margin-top: 16%, $margin-left: 67%);
-}
-.scene__colored-lantern {
-  @include image-location ($max-width: 11%, $margin-top: 8%, $margin-left: 72%);
-}
+  &__taxi-message {
+    @include image-location ($width: 9%, $margin-top: 16%, $margin-left: 52%);
+    animation: message 3.3s 8s;
+    opacity: 0;
+    z-index: 5;
+  }
+  
+  &__colored-lantern {
+    @include image-location ($width: 11%, $margin-top: 8%, $margin-left: 72%);
+    z-index: 6;
+  }
 
-.scene__woman-body {
-  @include image-location ($max-width: 5%, $margin-top: 23.2%, $margin-left: 19.5%);
-  z-index: 5;
-}
-.scene__woman-hand {
-  @include image-location ($max-width: 3%, $margin-top: 28.7%, $margin-left: 21%);
-}
-.scene__woman-suitcases {
-  @include image-location ($max-width: 10%, $margin-top: 32%, $margin-left: 19%);
+  &__woman-body {
+    @include image-location ($width: 5%, $margin-top: 23.2%, $margin-left: 19.5%);
+    z-index: 5;
+  }
+  &__woman-hand {
+    @include image-location ($width: 3%, $margin-top: 28.7%, $margin-left: 21%);
+    animation: woman-hand 4.5s 3s;
+  }
+  @keyframes woman-hand {
+    0% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: translateY(-20px) rotate(-45deg);
+    }
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+  
+  &__woman-suitcases {
+    @include image-location ($width: 10%, $margin-top: 32%, $margin-left: 19%);
+    z-index: 6;
+  }
+  &__woman-message {
+    @include image-location ($width: 9%, $margin-top: 17%, $margin-left: 15%);
+    animation: message 4.5s 3.5s;
+    opacity: 0;
+    z-index: 6;
+  }
+  @keyframes message {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+&__man-body {
+  @include image-location ($width: 11%, $margin-top: 18.5%, $margin-left: 25%);
   z-index: 6;
 }
-.scene__woman-message {
-  @include image-location ($max-width: 9%, $margin-top: 17%, $margin-left: 15%);
-}
-
-
-.scene__man-body {
-  @include image-location ($max-width: 11%, $margin-top: 18.5%, $margin-left: 25%);
-  z-index: 6;
-}
-.scene__man-hand {
-  @include image-location ($max-width: 5%, $margin-top: 22.5%, $margin-left: 23%);
+&__man-hand {
+  @include image-location ($width: 5%, $margin-top: 14.5%, $margin-left: 25.7%);
+  animation: man-hand 5s 5.5s;
   transform: rotate(150deg);
+  transform-origin: bottom left;
   z-index: 5;
 }
-.scene__man-message {
-  @include image-location ($max-width: 9%, $margin-top: 14%, $margin-left: 24.5%);
-  z-index: 1;
+@keyframes man-hand {
+  0% {
+    transform: rotate(150deg);
+  }
+ 20% {
+  transform: rotate(10deg);
+  margin-top: 15.7%;
+  margin-left: 25%;
+ }
+ 50% {
+  transform: rotate(10deg);
+  margin-top: 15.7%;
+  margin-left: 25%;
+ }
+  100% {
+    transform: rotate(150deg);
+  }
 }
-.scene__man-news {
-  @include image-location ($max-width: 9%, $margin-top: 14%, $margin-left: 24.5%);
+
+&__man-message {
+  @include image-location ($width: 9%, $margin-top: 14%, $margin-left: 24.5%);
+  animation: message 4s 5.7s;
+  opacity: 0;
+  z-index: 6;
+}
+&__man-news {
+  @include image-location ($width: 9%, $margin-top: 14%, $margin-left: 24.5%);
+  animation: message 5s 10.8s;
+  opacity: 0;
+  z-index: 6;
+}
+&__man-news--font {
+  @include open-sans ($font-size: 16px, $font-weight: 400);
+  animation: message 5s 10.8s;
+  opacity: 0;
+  width: fit-content;
+  padding: 1%;
+}
+@media (max-width: 1380px) {
+  .scene__man-news--font {
+    @include open-sans ($font-size: 12px, $font-weight: 400);
+  }
+}
+@media (max-width: 1029px) {
+  .scene__man-news--font {
+    @include open-sans ($font-size: 10px, $font-weight: 400);
+    padding: 0;
+  }
+}
+@media (max-width: 767px) {
+  .scene__man-news--font {
+    @include open-sans ($font-size: 8px, $font-weight: 400);
+    padding: 0;
+  }
+}
+@media (max-width: 595px) {
+  .scene__man-news--font {
+    @include open-sans ($font-size: 5px, $font-weight: 400);
+    margin: 13% 25%;
+  }
+}
+@media (max-width: 375px) {
+  .scene__man-news--font {
+    @include open-sans ($font-size: 3px, $font-weight: 400);
+    margin: 12% 25%;
+  }
+}  
 }
